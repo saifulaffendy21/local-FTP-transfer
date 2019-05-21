@@ -1,5 +1,4 @@
-# For details see man 4 crontabs
-
+# BELOW SOMA INFORMATION FOR CREATING CRONTAB FOR USER
 # Example of job definition:
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
@@ -11,6 +10,6 @@
 #BELOW THE SCRIPT FOR CRONJOB
  *  *  *  *  * root       bash <SHELL SCRIPT> >> <LOCATION OF THE OF LOG PROGRAM>
  
- *  *  *  *  * root       bash send_jira_xml.sh >> log_xml.txt
- *  *  *  *  * root       bash send_jira_attach.sh >> log_attachment.txt
+ *  *  *  *  * root       bash /log/FTP_BACKUP/send_jira_xml.sh >> /log/FTP_BACKUP/log_xml.txt
+ *  *  *  *  * root       bash /log/FTP_BACKUP/send_jira_attach.sh >> /log/FTP_BACKUP/log_attachment.txt
  
