@@ -22,7 +22,7 @@ IFS='/' # hyphen (/) is set as delimiter
 read -ra ADDR <<< "$FILE"
 
 # Get the last line in the history.txt file
-LASTCOPY=$(tail -n 1 /log/FTP_BACKUP/history.txt)
+LASTCOPY=$(tail -n 1 /var/log/FTP_BACKUP/history.txt)
 echo ""
 
 #  IF ELSE to compare the if file is new in FTP
@@ -32,7 +32,7 @@ if [ ${ADDR[-1]} = $LASTCOPY ]; then
 else 
   echo "The "${ADDR[-1]}"  file will be copy to FTP server (10.44.11.90)"
   echo ""
-  echo  ${ADDR[-1]} >> /log/FTP_BACKUP/history.txt
+  echo  ${ADDR[-1]} >> /var/log/FTP_BACKUP/history.txt
   #To save the current selected file for later checking 
   # Connect to FTP server
   ftp -inv $HOST <<EOF
