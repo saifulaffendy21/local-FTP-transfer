@@ -22,7 +22,7 @@ echo ""
 # Connect to FTP server
 ftp -inv $HOST <<EOF
 user $USER $PASSWORD
-cd confluence/
+cd  ~/atlassian_backup/jira/ATTACHMENTS_backup/
 put $ZIPFILE
 # mput *.txt
 bye
