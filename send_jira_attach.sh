@@ -14,8 +14,8 @@ PASSWORD=<ENTER PASSWORD OF FTP USER>
 ZIPFILE="$(date +%d:%m:%Y-%H%M-attachments_jira.zip)"
 echo $ZIPFILE "will be ZIPPED" 
 # Here is where need to specify the directory of the file that need to be ZIP
-zip -r /log/FTP_BACKUP/$ZIPFILE /var/atlassian/application-data/jira/data/avatars/ /var/atlassian/application-data/jira/data/attachments/
-cd /log/FTP_BACKUP/
+zip -r /var/log/FTP_BACKUP/$ZIPFILE /var/atlassian/application-data/jira/data/avatars/ /var/atlassian/application-data/jira/data/attachments/
+cd /var/log/FTP_BACKUP/
 
 echo "Connect FTP server to send the backup file"
 echo ""
