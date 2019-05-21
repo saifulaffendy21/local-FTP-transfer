@@ -35,6 +35,7 @@ else
   echo  ${ADDR[-1]} >> /var/log/FTP_BACKUP/history.txt
   #To save the current selected file for later checking 
   # Connect to FTP server
+  cd /var/atlassian/application-data/confluence/backups/
   ftp -inv $HOST <<EOF
   user $USER $PASSWORD
   cd ~/atlassian_backup/confluence/
