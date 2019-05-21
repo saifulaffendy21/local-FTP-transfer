@@ -12,7 +12,7 @@ USER=<ENTER USERNAME OF FTP SERVER>
 PASSWORD=<ENTER PASSWORD OF THE USER>
 
 # Get the latest file in the latest folder
-FILE=$(find /var/atlassian/application-data/jira/export/ -maxdepth 1 -type f \( ! -iname ".*" \) | cut -c1- | xargs ls -t | head -1)
+FILE=$(find /var/atlassian/application-data/confluence/backups/ -maxdepth 1 -type f \( ! -iname ".*" \) | cut -c1- | xargs ls -t | head -1)
 # Change ~/test.lab/test-ftp-tmrnd/ to selected backup file
 
 # Choose character to remove from string
@@ -37,7 +37,7 @@ else
   # Connect to FTP server
   ftp -inv $HOST <<EOF
   user $USER $PASSWORD
-  cd ~/atlassian_backup/jira/XML_backup/
+  cd ~/atlassian_backup/confluence/
   put ${ADDR[-1]}
   # mput *.txt TO SEND MULTIPLE FILE 
   bye
