@@ -10,3 +10,7 @@
 # *  *  *  *  * user-name  command to be executed
 #BELOW THE SCRIPT FOR CRONJOB
  *  *  *  *  * root       bash <SHELL SCRIPT> >> <LOCATION OF THE OF LOG PROGRAM>
+ 
+ *  *  *  *  * root       bash send_jira_xml.sh >> log_xml.txt
+ *  *  *  *  * root       bash send_jira_attach.sh >> log_attachment.txt
+ 
