@@ -10,6 +10,6 @@
 #BELOW THE SCRIPT FOR CRONJOB
  *  *  *  *  * root       bash <SHELL SCRIPT> >> <LOCATION OF THE OF LOG PROGRAM>
  
- *  *  *  *  * root       bash /var/log/FTP_BACKUP/send_jira_xml.sh >> /var/log/FTP_BACKUP/log_xml.txt
- *  *  *  *  * root       bash /var/log/FTP_BACKUP/send_jira_attach.sh >> /var/log/FTP_BACKUP/log_attachment.txt
- 
+ 0  22  *  *  * root       bash /var/log/FTP_BACKUP/send_jira_xml.sh >> /var/log/FTP_BACKUP/log_xml.txt
+ 0  23  *  *  * root       bash /var/log/FTP_BACKUP/send_jira_attach.sh >> /var/log/FTP_BACKUP/log_attachment.txt
+ 0  22  *  *  thu root     bash /var/log/FTP_BACKUP/send_confluence_xml.sh >> /var/log/FTP_BACKUP/log_attachments.txt
